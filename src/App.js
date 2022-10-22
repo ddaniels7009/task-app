@@ -23,7 +23,8 @@ class App extends Component {
         text: e.target.value,
         id: this.state.task.id,
       }
-    });
+    })
+  
   };
 
   onSubmitTask = (e) => {
@@ -43,6 +44,7 @@ class App extends Component {
 
     return (
       <div>
+        <Overview tasks={this.state.tasks}/>
         <form onSubmit={this.onSubmitTask}>
           <label htmlFor="taskInput">Enter task</label>
           <input
